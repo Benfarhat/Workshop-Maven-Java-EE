@@ -47,6 +47,10 @@
     <continuous.server.ip>127.0.0.1</continuous.server.ip>
   </properties> 
   
+  <modules>
+    <module>project-war</module>
+  </modules>
+  
   <dependencyManagement>
     <dependencies>
     	<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
@@ -69,7 +73,9 @@
         <sendOnFailure>true</sendOnFailure>
         <sendOnSuccess>false</sendOnSuccess>
         <sendOnWarning>false</sendOnWarning>
-        <configuration><address>${continuous.server.name}@${continuous.server.name}</address></configuration>
+        <configuration>
+          <address>${continuous.server.name}@${continuous.server.name}</address>
+        </configuration>
       </notifier>
     </notifiers>
   </ciManagement>
